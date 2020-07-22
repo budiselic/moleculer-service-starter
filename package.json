@@ -1,0 +1,30 @@
+{
+  "name": "moleculer-service",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Antonio Budiselić",
+  "license": "ISC",
+  "scripts": {
+    "dev": "moleculer-runner --repl --hot services/**/*.service.js -i 2",
+    "start": "moleculer-runner services/**/*.service.js -i 3",
+    "ci": "jest --watch",
+    "test": "jest --coverage",
+    "lint": "eslint services",
+    "lint-fix": "eslint services --fix",
+    "cli": "moleculer connect TCP",
+    "dc:up": "docker-compose up --build -d",
+    "dc:logs": "docker-compose logs -f",
+    "dc:down": "docker-compose down"
+  },
+  "dependencies": {
+    "moleculer": "^0.14.8"
+  },
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "jest": "^26.1.0",
+    "jest-cli": "^26.1.0",
+    "moleculer-repl": "^0.6.4"
+  }
+}
